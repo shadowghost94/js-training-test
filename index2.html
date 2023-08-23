@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const a={
+            firstname: 'John',
+            lastname: 'Doe',
+            fullname: function(){
+                console.log(`${this.firstname} ${this.lastname}`)
+            }
+        }
+        a.fullname()
+
+        const FoncFletch=(parm1, parm2)=>parm1+parm2;
+        console.log(FoncFletch(4,5), this);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

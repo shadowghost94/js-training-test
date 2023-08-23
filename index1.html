@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*const greeting='Bonjour';
+        for(let i of greeting)console.log(i);*/
+
+        let user=prompt("Veuillez entrer un chiffre entre 0 et 10: ");
+        while(user<=0 || user>=10){
+            console.log("Erreur! le nombre à entrer doit être supérieur à 0 et inférieur à 10.");
+            user =prompt("Veuillez entrer une nouvelle valeur: ");
+        }
+        
+        let i=0;
+        while(i!=user)console.log(i++);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
