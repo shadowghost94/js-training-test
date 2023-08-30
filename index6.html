@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const b= new Book('Le seigneur des anneaux', 200);
+        console.log(b.page);
+        b.nextPage();
+        console.log(b.page)
+        b.close();
+        console.log(b.page);
+
+        const l= new library();
+        l.addBook(n);
+        l.addBooks([
+            new Book('Ready player one', 100),
+            new Book('Oui-Oui', 10),
+            new Book('Sillage', 50)
+            ])
+        l.findBooksByLetter('S'); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
