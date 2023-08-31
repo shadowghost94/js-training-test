@@ -6,6 +6,53 @@
     <title>Document</title>
 
     <script>
+       
+
+        class Book{
+            #page= 1;
+
+            constructor(title, pages)
+            {
+                this.title= title;
+                this.pages= pages;
+            }
+
+            get page()
+            {
+                return this.#page;
+            }
+
+            nextPage()
+            {
+                if(this.#page<this.pages){
+                    this.#page++;
+                }
+            }
+
+            close()
+            {
+                this.#page=1; 
+            }
+        }
+
+        class library{
+            #books= []
+            
+            addBook(book)
+            {
+                this.#books= push(book)
+            }
+
+            addBooks()
+            {
+
+            }
+
+            findBooksByLetter()
+            {
+
+            }
+        }
         const b= new Book('Le seigneur des anneaux', 200);
         console.log(b.page);
         b.nextPage();
