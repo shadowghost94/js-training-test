@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="myLink" href="lien_quelconque.com">cliquez pour vous rendre sur le site du zero</a>
+
+    <script>
+        var link=document.getElementById('myLink');
+        var href=link.getAttribute('href');//on récupère l'attribut href
+        alert(href);
+
+        link.setAttribute('href', 'http://www.siteduzero.com');//on édite son contenu
+    </script>
+</body>
+</html>
