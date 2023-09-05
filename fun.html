@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *, ::before, ::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #333;
+        }
+
+        nav{
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background: #f1f1f1;
+            position: fixed;
+            width: 100%;
+        }
+
+        nav a {
+            color: #222;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        section{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#values">Our Values</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <p>HOME</p>
+</section>
+
+<section id="values">
+    <p>OUR VALUES</p>
+</section>
+
+<section id="contact">
+    <p>CONTACT</p>
+</section>
+
+</body>
+</html>
