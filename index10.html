@@ -13,7 +13,14 @@
 
     <script>
         const paragraph=document.getElementById('my_id');
-        alert(paragraph);
+        alert(paragraph.nodeName);
+        const first=paragraph.firstChild;
+        const last=paragraph.lastChild;
+        const parent=paragraph.parentNode;
+
+        alert(first.nodeName.toLowerCase());
+        alert(last.nodeName.toLowerCase());
+        alert(parent.nodeName.toLowerCase());
     </script>
 </body>
 </html>
