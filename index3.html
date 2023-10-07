@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        console.log('Ce programme vérifie si le caractère que vous allez bientôt entrer est un palyndrôme.');
-        let chaine0= prompt('veuillez entrer un caractère: ');
 
-        const taille=
-        let tableau[strlen(chaine0)];
-        for(let i=0, let j=strlen(chaine0); i<strlen(chaine0); i++)
+        console.log('Ce programme vérifie si le caractère que vous allez bientôt entrer est un palyndrôme.');
+        var chaine0= prompt('veuillez entrer un caractère: ');
+
+        function isPalindrome(something)
         {
-            tableau[i]= chaine0[i];
+            let Words= something.split('');
+            const inverse= Words.reverse('');
+            something= inverse.join('');
+
+            if(something==chaine0)return true;
+                else return false;
+            
         }
+
+        let container= isPalindrome(chaine0);
+        if(container==true)console.log("Le mot que vous avez entré est un palyndrome !");
+            else console.log("le mot que vous avez entré n'est pas un palyndrome !");
+
+        
     </script>
 </head>
 <body>

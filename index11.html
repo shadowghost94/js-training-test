@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>le titre de la page</title>
+</head>
+<body>
+    <!-- firstElementChild/lastElementChild 
+    la premier permet de récupérer dans une balise, la première sous ballise 
+    rencontré. 
+        Le deuxième permet de récupérer dans une balise, le dernier sous 
+    balise -->
+
+    <div>
+        <p id="myid"> Un peu de texte world <a href="www.youtube.com">cliquer ici</a> <strong>Une portion en en strong poour le qualifier d'important</strong> </p>
+    </div>
+
+    <script>
+        var parace=getElementById('myid');
+        alert('hello');
+        alert(parace.firstElementChild);
+        alert(parace.lastElementChild);
+    </script>
+</body>
+</html>
