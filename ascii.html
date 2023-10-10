@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction de la table des caractères ASCII</title>
+    <style type="text/css">
+        div.indice, div.char{
+            display: inline-block;
+        }
+
+        div.indice{
+            color: #999;
+            text-align: right;
+            width: 30px;
+        }
+
+        div.char{
+            text-align: center;
+            font-weight: bold;
+            width: 40px;
+        }
+
+        div.break{
+            clear: both;
+        }
+
+        div#ascii{
+            -webkit-column-count: 5; /* Chrome,Safari, Opéra*/
+            -moz-column-count: 5;
+            column-count: 5;
+        }
+    </style>
+</head>
+<body>
+    <div id="ascii"></div>
+    <script type="text/javascript">
+        var ascii="";
+        for(var i=0; i<256; i++)
+        {
+            ascii+="<div class='indice'>"+i+"</div>";
+            ascii+="<div class='char'>"+String.fromCharCode(i)+"</div>";
+            ascii+="<div class='break'></div>";
+        }
+
+        document.getElementById("ascii").innerHTML=ascii;
+        console.log("valeur de i après la boucle: "+i);
+        console.log("Longueur de la chaine ascii: "+ascii.length);
+    </script>
+</body>
+</html>
