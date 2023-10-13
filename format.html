@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatage de nombre</title>
+</head>
+<body>
+    <script>
+        //var int1= new intl.NumberFormat();
+        //console.log(int1.format(8560.154));
+        //console.log(int1.format(123456789.154));
+    </script>
+
+    <h3>Le type BigInt<h3>
+        <script>
+            var un =BigInt(1);
+            document.write(un);
+            var deux=2n;
+            document.write("<br/>"+typeof(deux)+"<br/>");
+            var M= BigInt(Number.MAX_SAFE_INTEGER);
+            console.log(M);
+            console.log(M.toLocaleString());
+        </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des dates</title>
+</head>
+<body>
+    <h3>Affichage des dates en javascript</h3>
+    <p>
+        il est conseillé d'afficher des dates en javascript sur son site web
+        cela permet donc de faire par défaut les configurations en fonction 
+        des informations qu'on aura trouvé dans le navigateur de l'utilisateur
+    </p>
+    <script>
+        var jour1= new Date(2019,11,25,23,59,59);
+        var jour2= new Date(2019,1,29);
+        var jour3= new Date(2019,1,28,28,0,0);
+        var jour4= new Date(1234567890000);
+
+        //affichage en cours...
+        console.log(jour1);
+        console.log(jour2);
+        console.log(jour3);
+        console.log(jour4);
+
+        /* par défaut, la date s'affiche en englais, au format saxon. Il 
+        faudra donc l'adapter si nécessaire au format français.*/
+        
+        //le code suivant est une manière d'afficher ses dates en français
+        function formatDate(dt)
+        {
+            //définitions des tableaux de libellés des jours et des mois
+            var jours= new Array("Damanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+            var mois= new Array("Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
+
+            var j= dt.getDay();
+            var d= dt.getDate();
+            if(d==1){d+="er";}//la date est le 1, on affiche le 1er
+            
+            var m=dt.getMonth();
+            var y= dt.getFullYear();
+            var h= dt.getHours();
+            if(h<10){h="0"+h;} //l'heure sur un caractère, on ajoute 0
+            
+            var i=dt.getMinutes();
+            if(i<10){i="0"+i;}//les minutes sur caractère, on ajoute un 0
+
+            var s=dt.getSeconds();
+            if(s<10){s="0"+s;}//les secondes sur un caractère,on ajoute un 0
+            //retour des différents éléments concatenés
+
+            return jours[j]+" "+d+" "+mois[m]+" "+y+" / "+h+":"+i+":"+s;
+        }
+
+    </script>
+    <script>
+        //Testons maintenant la fonction formatDate()
+        var da= new Date();
+        var recep=formatDate(da);
+       document.write(recep);
+    </script>
+    
+</body>
+</html>

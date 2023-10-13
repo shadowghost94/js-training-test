@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>utilisation des RegExp pour transformer des URL en visionneuse</title>
+</head>
+<body>
+    <h1>Utilisation des RegExp pour transformer des URL  en visionneuse</h1>
+    <p>Remplace des url youtube du texte original enn visionneuse HTML</p>
+    <h2>Texte d'origine</h2>
+    <div class="block" id="formatage">https://www.youtube.com/results?search_query=master+informatique</div>
+
+    <script type="text/javascript">
+        /* Récupère le contenu HTML de div#texte */
+        var contenu=document.querySelector("div#texte").innerHTML;
+        /*Report du contenu formaté dans div#formatage*/
+        document.querySelector("div#formatage").innerHTML=formaterTexteYoutube(contenu);
+        /* Fonction de formatage du contenu*/
+        function formaterTexteYoutube(t){
+            var regYoutube=new RegExp("(https://youtu.be/)([0-9a-zA-Z])(//2s*)","gi");
+            return t.replace(regYoutube,"<div class=\"youtube\"><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/$2\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe></div>");
+        }
+    </script>
+
+    <style type="text/css">
+        div.block{
+            margin: 8px;
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+    </style>
+</body>
+</html>

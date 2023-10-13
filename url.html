@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendre des url cliquables</title>
+    <style type="text/css">
+        a{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="monDiv">
+        Vous trouverez sur http://www.toutjavascript.com un outil d'assistance 
+        pour le test et la création d'expressions régulières à la page 
+        http://www.toutjavascript.com/service/regexp.html !
+    </div>
+
+    <script type="text/javascript">
+        var txt=document.getElementById('monDiv').innerHTML;
+        var regUrl=/((ht|f)tps?:\/\/\S*)/gi;
+        txt=txt.replace(regUrl,"<a href='$1'>$1</a>");
+        document.getElementById("monDiv").innerHTML=txt;
+    </script>
+</body>
+</html>

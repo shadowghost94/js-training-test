@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation des motifs de formats</title>
+</head>
+<body>
+    <script>
+        /* on utilise un format global pour valider les entrées de l'utilisateur
+        comme les e-mail,les url, les chaines de caractères, etc*/
+        var regdate=new RegExp("[0123][0-9]{1}[-/]{1}[01][0-9]{1}[-/]{1}[0-9]{4}");
+        var regtxt="Johnny Halliday est né le 15/06/1943 et mort le 05-12-2017";
+        console.log(regdate.test(regtxt));//retourne true
+        console.log(regdate.exec(regtxt));         //retourne 15/06/1943
+
+        //ici nous controlons une chaine au format e-mail
+        var format=/^[a-z0-9\-_]+[a-z0-9\.\-_]*@[a-z0-9\-_]{2,}\.[a-z\.\-_]+[a-z\-_]+$/i;
+        var mail1="contact@google.fr";
+        var mail2="contact.client1@france.google.com";
+        var mail3="contact client@google.com";
+        var mail4="contact@goole";
+        var mail5="mail: contact@google.fr";
+        var mail6="contact-client-75000@fr.mail-google.fr";
+
+        //Nous passons maintenant au test de chacun des mail 
+        console.log(format.test(mail1));
+        console.log(format.test(mail2));
+        console.log(format.test(mail3));
+        console.log(format.test(mail4));
+        console.log(format.test(mail5));
+        console.log(format.test(mail6));
+    </script>
+</body>
+</html>

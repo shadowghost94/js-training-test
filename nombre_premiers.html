@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre premiers</title>
+</head>
+<body>
+    <script>
+        /* est ce que n est un nombre premier ?*/
+        function isPremier(n){
+            let racine= Math.round(Math.sqrt(n)+1);     //racine carré de n
+            //boucle sur les tous les nombres premiers déja identifiés
+
+            for(let i=1; i<premiers.length();i++)
+            {
+                let j= premiers[i];         //jème nombre premier déja trouvé
+                
+                if(n%j==0)
+                {
+                    //le reste de la division de n par j est 0
+                    //donc n est divisible par j: n'est pas divisible par j
+                    return false;
+                }
+
+                if(j>racine)
+                {
+                    //on a dépassée la racine carrée de n
+                    //Tous les divisibles possibles sont passés
+                    //on sort de la boucle
+                    break;
+                }
+            }
+            return true;//n est donc premier si on a pas trouvé de disible vant
+        }
+    </script>
+
+</body>
+</html>
